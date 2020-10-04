@@ -95,7 +95,8 @@ function calcEntropyForWordOrSymbol (isSymbol) {
 
   if (!isSymbol) {
     // ~ 12.9 bit of entropy per Diceware word.
-    entropy = new Big(Math.log2(7776))
+    var numWords = currentList === "effShort" ? 1296 : 7776
+    entropy = new Big(Math.log2(numWords))
   } else {
     // ~ 5.16 bits for special characters.
     entropy = new Big(Math.log2(36))
@@ -127,7 +128,8 @@ function calcCrackTime (numWords, guessesPerSec) {
   // https://xkcd.com/936/
   // https://security.stackexchange.com/questions/62832/is-the-oft-cited-xkcd-scheme-no-longer-good-advice/62881#62881
   // https://hashcat.net/forum/thread-2580.html
-  keySpace = new Big(Math.pow(7776, numWords))
+  var dictLength = currentList === "effShort" ? 1296 : 7776
+  keySpace = new Big(Math.pow(dictLength, numWords))
 
   // Divide the keySpace in half. On average it is expected that an
   // exhaustive search of only half the keySpace will result in success.
@@ -220,6 +222,9 @@ function getWordFromWordNum (wordNum) {
         break
       case 'spanish':
         word = spanish[wordNum]
+        break
+      case 'effShort':
+        word = effShort[wordNum % 10000]
         break
       default:
         word = eff[wordNum]

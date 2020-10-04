@@ -1,3 +1,5 @@
+This is a fork of [https://github.com/grempe/diceware](https://github.com/grempe/diceware), modified to include the [EFF short word list](https://www.eff.org/document/eff-short-wordlist-passphrases-1)
+
 # Diceware Passphrase Generator
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)

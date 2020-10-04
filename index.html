@@ -28,6 +28,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="#" class="listSelectionLink" data-list="eff">EFF (EN)</a></li>
+            <li><a href="#" class="listSelectionLink" data-list="effShort">EFF short (EN)</a></li>
             <li><a href="#" class="listSelectionLink" data-list="diceware">Diceware (EN)</a></li>
             <li><a href="#" class="listSelectionLink" data-list="alternative">Diceware Alt (EN)</a></li>
             <li><a href="#" class="listSelectionLink" data-list="basque">Basque</a></li>
@@ -135,8 +136,7 @@
       <div id="entropyEstimateContainer" class="well well-sm">
         <span class="label label-default">entropy stats</span><br /><br />
         <p>There are <code id="totalWords"></code> words in your password, resulting
-          in ~<code id="totalEntropy"></code> bits of entropy (~<code>12.92 bits/word</code>,
-          ~<code>10 bits/letter</code>, and ~<code>5.16 bits/symbol</code>). That
+          in ~<code id="totalEntropy"></code> bits of entropy. That
           many words equates to a total keyspace of ~<code id="crackTimeResultsKeySpace"></code>
           possible phrases <code>(7776^WordsInPhrase)</code>. An adversary might
           get lucky and guess your phrase on the first try, though the chances of
@@ -319,6 +319,7 @@
     <script src="lists/special-min.js" integrity="sha384-bWlPtpszg6ff0Z4tBQ/rn+w/gSyuIWPoo6FygsYKV20VXR0nvOXP4f3TMSaY/poB" crossorigin="anonymous"></script>
     <script src="lists/diceware-min.js" integrity="sha384-Bxncy+d8O2xlYeIofeyogSmyxlxmxhrtOQZWVDYdHW4Ip7HR8J7z2mI8zcYhwIfH" crossorigin="anonymous"></script>
     <script src="lists/eff.js" integrity="sha384-flaRXFCjJXiYkQTk9YdSyqn5XEHkbISbCoVWyTgmNw8hmlJpn39fHW9//gccdZcc" crossorigin="anonymous"></script>
+    <script src="lists/eff-short.js" integrity="sha384-+eHr8JQ3z8xrV+ZBGaXnvSFAikRSiSvaQbcMg9pOkrOqy9k1Yn8836YPo8rjwSU4" crossorigin="anonymous"></script>
 
     <!-- load the secondary languages async -->
     <script async src="lists/alternative-min.js" integrity="sha384-n54eORJtgeTfAQr8EXYh1kA+RC9JXTgQjyKfAAZkGOtyuMKGuZGOXue90nKDvHYz" crossorigin="anonymous"></script>
@@ -340,9 +341,9 @@
     <script async src="lists/russian-min.js" integryty="sha384-hQRKR3ReKFidL1Zkprmbumo3c/u7DIkrWXHKe31uPEv2GyVseFnPWkIAfXYj7T+P" crossorigin="anonymous"></script>
     <script async src="lists/spanish-min.js" integrity="sha384-Run924pvGSmDFc9EfHQSE1qgb/A+Ct8ZEIKh03/HzvpIQROCuc2zlUoRY2Aah2CR" crossorigin="anonymous"></script>
     <script async src="lists/swedish-min.js" integrity="sha384-6JJZcWqkihCRQXrH0UtKejY0PkFd+bTx7yHuwp56kj21xVt9NTOG4yuDsHKlUAfX" crossorigin="anonymous"></script>
-
+    
     <!-- core application JS -->
-    <script src="index.js" integrity="sha384-gSWvwLjtk9D9/TjPoZijwEquFBpJc2+eyfUwB0kXzXpvQCIMQK0eQ7oh9SfJoGZf" crossorigin="anonymous"></script>
+    <script src="index.js" integrity="sha384-YqElzz+v/sVRHuRGXQd0+Hy5IJC/J/W3whufApM7O/YotNdLySCvJthTAiEFUWlb" crossorigin="anonymous"></script>
 
   </body>
 
